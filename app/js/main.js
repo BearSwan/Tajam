@@ -68,7 +68,7 @@ $(document).ready(function(){
 
 });
 
-
+/*portfolio slider responsive view (change rows)*/
 var viewportWidth = $(window).width();
 if( viewportWidth > 768 ){
     var Rows = 2;
@@ -77,6 +77,9 @@ if( viewportWidth > 768 ){
     var Rows = 2;
     var Slides = 2;
 }
+
+/*wow effects initialize*/
+new WOW().init();
 
 
 

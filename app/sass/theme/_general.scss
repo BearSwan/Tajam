@@ -36,6 +36,7 @@ h3 {
   &-text {
     font-family: "robotothin", sans-serif;
     font-size: 30px;
+    background-image: transparent;
     background-image: linear-gradient(to right, #00e0d0, #4aa3cc), linear-gradient(#ffffff, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
