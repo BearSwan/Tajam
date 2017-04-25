@@ -11,10 +11,10 @@ var src_css = 'app/css';
 gulp.task('sass', function () { // Создаем таск "sass"
     return gulp.src(src_sass) // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
-        .pipe(gulp.dest(src_css)) // Выгружаем результат в папку app/css
+        .pipe(gulp.dest(src_css))// Выгружаем результат в папку app/css
 });
 
-gulp.task('css', function () {s
+gulp.task('css', function () {
     return gulp.src(src_css +'/main.css')
         .pipe(postcss([ autoprefixer() ]))
         .pipe(cssnano())
