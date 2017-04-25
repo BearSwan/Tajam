@@ -1,0 +1,165 @@
+.header {
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  z-index: 2;
+
+  /*wrapper*/
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /*navigation*/
+  &-nav {
+    overflow: hidden;
+    display: none;
+    padding-top: 125px;
+    background-color: rgba($black, .8);
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /*nav-item*/
+    &_item {
+      display: block;
+      font-family: "robotoblack", sans-serif;
+      font-size: 24px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /*nav-link*/
+    &_link {
+      color: $white;
+      &:hover {
+        color: $green;
+      }
+    }
+
+  }
+
+
+  /*burger*/
+  &-burger {
+    display: none;
+  }
+
+}
+
+/*burger button*/
+/*burger - button*/
+.burg-wrapper {
+  width: 20px;
+  height: 15px;
+  position: relative;
+  margin: 50px auto;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.bar1, .bar2, .bar3, .bar4 {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  opacity: 1;
+  left: 0;
+  transition: .25s ease-in-out;
+}
+
+.bar1, .bar4 {
+  background-color: $green;
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2, .bar3 {
+  top: 7px;
+  background-color: $white;
+}
+
+.bar4 {
+  top: 14px;
+}
+
+.change {
+
+  .bar1 ,
+  .bar4 {
+    top: 10px;
+    width: 0;
+    left: 50%;
+  }
+
+  .bar2 {
+    transform: rotate(45deg);
+  }
+
+  .bar3 {
+    background-color: $green;
+    transform: rotate(-45deg);
+  }
+
+}
+
+/*MEDIA QUERIES*/
+@media (min-width: 768px) {
+
+  .header {
+
+    /*hide navigation*/
+    &-nav {
+      background-color: transparent;
+      position: static;
+      display: block;
+      padding: 0;
+      width: auto;
+      height: auto;
+      &-list {
+        list-style: none;
+      }
+
+      /*nav-item*/
+      &_item {
+        display: inline-block;
+        font-size: 13px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+      }
+
+      /*nav-link*/
+      &_link {
+        color: $white;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+
+  }
+
+  /*nav link margin*/
+  .header-nav_item + .header-nav_item {
+    margin-left: 30px;
+  }
+
+}
+
+@media (max-width:768px) {
+  /*burger appears*/
+  .header-burger {
+    display: block;
+  }
+}
+

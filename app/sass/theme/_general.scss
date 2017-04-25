@@ -1,0 +1,89 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "robotolight",  'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+
+  height: 100%;
+  letter-spacing: 0.7px;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+h3 {
+  font-family: "playfair_displaybold", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+}
+
+/*logo*/
+.logo {
+  &-text {
+    font-family: "robotothin", sans-serif;
+    font-size: 30px;
+    background-image: linear-gradient(to right, #00e0d0, #4aa3cc), linear-gradient(#ffffff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/*main-btn*/
+.main-btn {
+  min-width: 120px;
+  display: inline-block;
+  color: $green;
+  border: solid 1px $green;
+  border-radius: 2px;
+  font-family: "hammersmithoneregular", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 15px 8px;
+  background-color: transparent;
+  &:hover {
+    border: 1px dotted $green;
+  }
+}
+
+/*subtitle*/
+.subtitle {
+  font-family: "playfair_displayregular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+}
+
+/*author*/
+.name {
+  display: block;
+  font-family: "robotoblack", sans-serif;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+/*position*/
+.position {
+  font-family: "robotolight", sans-serif;
+  font-size: 13px;
+  color: rgba($white, .7);
+  text-transform: uppercase;
+}
+
+/*overflow hidden*/
+.overflow-hidden {
+  overflow: hidden !important;
+}

@@ -1,0 +1,62 @@
+.expertise {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center;
+
+  /*wrapper*/
+  &-wrap {
+    max-width: 940px;
+    margin: 40px auto 0;
+  }
+
+  /*item*/
+  &-item {
+    padding: 40px 30px;
+  }
+
+  /*item-title*/
+  &-title {
+    font-family: "robotoblack", sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 25px 0;
+  }
+
+  /*img*/
+  &-img {
+    height: 50px;
+  }
+
+  /*text*/
+  line-height: 1.57;
+  letter-spacing: 0.7px;
+
+}
+
+/*borders for items*/
+.optimization, .game, .love {
+  border-top: 1px solid rgba($black, .1);
+}
+
+.brand, .game {
+  border-left: 1px solid rgba($black, .1);
+  border-right: 1px solid rgba($black, .1);
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 768px) {
+  .optimization, .game, .love, .brand, .game {
+    border: none;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .expertise-item {
+    height: 310px;
+  }
+
+}
+

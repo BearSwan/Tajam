@@ -1,0 +1,200 @@
+.footer {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: {
+    image: url("../img/footer-bg.png");
+    position: center center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  z-index: 1;
+  color: $white;
+
+  /*title*/
+  &-title {
+    font-family: "robotoblack", sans-serif;
+    font-size: 15px;
+    line-height: 1.73;
+    letter-spacing: 0.8px;
+    margin: 15px 0 38px;
+  }
+
+  /*COMPANY*/
+  &-company {
+
+    /*text*/
+    &_text {
+      line-height: 1.86;
+      margin-top: 25px;
+      letter-spacing: 0.4px;
+    }
+  }
+
+  /*CONTACT*/
+  &-contact {
+    line-height: 1.86;
+    letter-spacing: 0.4px;
+
+    /*adress*/
+    &_address {
+      display: inline-block;
+      padding-left: 30px;
+      position:relative;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: {
+          image: url("../img/address.png");
+          position: center center;
+          repeat: no-repeat;
+        }
+      }
+    }
+
+    /*telephone*/
+    &_telephone {
+      display: inline-block;
+      margin-top: 25px;
+      padding-left: 30px;
+      position:relative;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: {
+          image: url("../img/phone.png");
+          position: center center;
+          repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  /*SUBSCRIBE*/
+  &-subscribe {
+
+    /*form*/
+    &_form {
+      margin: 0;
+    }
+
+    /*input*/
+    &_input {
+      padding: 10px 15px;
+      background-color: transparent;
+      border: 1px solid rgba($white, .5);
+    }
+
+    /*button*/
+    &_btn {
+      height: 42px;
+      border: 1px solid rgba($white, .5);
+      background-color: rgba($white, .5);
+      background: {
+        image: url("../img/footer-btn.png");
+        position: center center;
+        repeat: no-repeat;
+      }
+    }
+  }
+
+  /*SOCIAL*/
+  .footer-social {
+    margin-top: 25px;
+    &_item{
+      display: inline-block;
+      border: 1px solid $white;
+      border-radius: 15px;
+      a {
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 30px;
+        height: 30px;
+        display: block;
+      }
+    }
+  }
+
+  /*BOTTOM*/
+    &-bottom {
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /*info*/
+    &-info {
+      /*item*/
+      &_item {
+        display: inline-block;
+        list-style: none;
+      }
+
+      /*link*/
+      &_link {
+        font-family: "robotoregular", sans-serif;
+        font-size: 14px;
+        line-height: 1.86;
+        letter-spacing: 0.4px;
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+
+  /*copyright*/
+  &-copyright_text {
+    line-height: 1.86;
+  }
+
+
+
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $blue;
+    opacity: 0.85;
+    z-index: -1;
+  }
+}
+
+/*social icons*/
+$socials : fb, tw, dr, in, g, you;
+
+@each $social in $socials {
+  $i: index($socials, $social);
+  .footer-social_item .#{$social} {
+    background-image: url("../img/"+ $social +"-icon.png");
+  }
+}
+
+.footer-social_item + .footer-social_item {
+  margin-left: 5px;
+}
+
+/*MEDIA*/
+@media (max-width: 991px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer-subscribe_input {
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-info_item + .footer-info_item {
+    margin-left: 50px;
+  }
+}
